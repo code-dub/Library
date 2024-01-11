@@ -1,14 +1,16 @@
-const myLibrary = [];
+// const myLibrary = [];
 
-function Book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function () {
-        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`
-    }
-}
+
+
+// function Book(title, author, pages, read){
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.info = function () {
+//         return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`
+//     }
+// }
 
 // const book1 = new Book('The hobbit', 'RR Towlien', 1290, 'not read yet');
 // const book2 = new Book('Ramu Kaka', 'Ram prasad', 288, 'read');
@@ -22,3 +24,25 @@ function Book(title, author, pages, read){
 // console.log(myLibrary);
 
 
+// function addBookToLibrary(title, author, pages, read){
+    
+// }
+
+const btn = document.querySelector('#btn');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.close');
+const submit = document.querySelector('#submit-btn');
+const cancel = document.querySelector('#cancel-btn');
+
+
+btn.addEventListener("click", () => {
+    modal.showModal();
+});
+
+cancel.addEventListener('click', (e) => {
+    modal.close();
+})
+
+closeModal.addEventListener('click', (e) => {
+    modal.close();
+})
