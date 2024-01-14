@@ -5,31 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="design.css">
 </head>
 
 <body>
-    <button type="button" id="btn">+</button>
+    <div class="header">
+        <h1>Welcome to the Book Library</h1>
+        <br><br><br><br><br>
+        <div class="div-add-books">
+            <button class="add-books">&#43;</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="head">
+            <h2>Books catalog:</h2>
+        </div>
+        <br>
+        <div class="display">
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="side-head">
+            <h2>Please use the below form to add books to library</h2>
+            <br><br>
+        </div>
+        <div class="form">
+            <form action="#" method="post">
+                <label for="title">Book Title</label>
+                <input type="text" name="title" id="title" class="form-input" required>
+                <label for="author">Book Author</label>
+                <input type="text" name="author" id="author" class="form-input" required>
+                <label for="pages">Number of pages</label>
+                <input type="number" name="pages" id="pages" min="1" class="form-input" required>
+                <label for="read">Have you read the book?</label>
+                <select name="read" id="read">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <input type="submit" value="submit" id="submit">
+                <input type="reset" id="reset">
+            </form>
+            <div>
+                <button class="close-sidebar">Close</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <h1>Welcome to Ramu Kaka's world of books and magic</h1>
+    <div class="sub-heading">
+        Click below to add new books
+    </div>
+
+   <button type="button" id="btn">+</button>
 
     <dialog class="modal">
-        <form action="#">
+        <form action="#" method="dialog">
             <div class="header">
                 <h2>Add your book to the library</h2>
                 <button class="close">&#10006;</button>
             </div>
-            <label for="title">Title</label>
-            <input type="text" id="title" class="form title" />
-            <label for="author">Author</label>
-            <input type="text" id="author" class="form author" />
-            <label for="pages">Number of pages</label>
-            <input type="number" id="pages" class="form pages" />
-            <label for="read">Have you read the book</label>
-            <input type="checkbox" name="read" id="read">
-            <button type="button" id="submit-btn">Submit</button>
-            <button type="button" id="cancel-btn">Cancel</button>
+            <div class="form-section">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form title" />
+                <label for="author">Author</label>
+                <input type="text" id="author" class="form author" pattern="^[a-zA-Z]+" />
+                <label for="pages">Number of pages</label>
+                <input type="number" id="pages" class="form pages" minlength="1" min="1" />
+                <label for="read">Have you read the book</label>
+                <input type="checkbox" name="read" id="read">
+            </div>
+            <div class="form-btn">
+                <button type="submit" id="submit-btn" value="default">Submit</button>
+                <button type="button" id="cancel-btn" formmethod="dialog">Cancel</button>
+            </div>
         </form>
     </dialog>
+
+    <div class="display">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">Books Catalog</th>
+                </tr>
+            </thead>
+            <tr class="catalog">
+            </tr>
+        </table>
+    </div> -->
 
 </body>
 
